@@ -2,6 +2,9 @@
 import random
 from time import sleep
 
+user_batting_done = False
+user_bowling_done = False
+
 coinflip_win_status_bat = False
 coinflip_win_status_bowl = False
 
@@ -52,10 +55,13 @@ elif comp_coinflip == "heads" and coinflip == "tails":
         comp_choice_bat_ball = random.choice(bat_bowl_random)
         if comp_choice_bat_ball == "bat":
             print("The computer chose batting, so you will be bowling.")
+            coinflip_win_status_bowl = True
             break
 
         elif comp_choice_bat_ball == "bowl":
             print("The computer chose bowling. So you will be batting.")
+            coinflip_win_status_bat = True
+
             break
 
         else:
@@ -84,10 +90,12 @@ elif comp_coinflip == "tails" and coinflip == "heads":
         comp_choice_bat_ball = random.choice(bat_bowl_random)
         if comp_choice_bat_ball == "bat":
             print("The computer chose batting, so you will be bowling.")
+            coinflip_win_status_bowl= True
             break
 
         elif comp_choice_bat_ball == "bowl":
             print("The computer chose bowling. So you will be batting.")
+            coinflip_win_status_bat = True
             break
 
         else:
@@ -116,6 +124,8 @@ if coinflip_win_status_bat == True:
         keywords = ['1','2','3','4','5','6','score']
 
         comp_roll = ['1','2','3','4','5','6']
+
+        print("The computer will be bowling. Your objective is to keep scoring without typing a number that would match the computer's roll.")
 
 
         while True:
@@ -147,6 +157,7 @@ if coinflip_win_status_bat == True:
                         print("OUT!!")
                         sleep(1)
                         print("Your total score was:",score)
+
                         break
 
                 else:
@@ -197,6 +208,7 @@ if coinflip_win_status_bowl == True:
                         print("OUT!!")
                         sleep(1)
                         print("The total score was:",score)
+                        user_bowling_done = True
                         break
 
                         
@@ -209,5 +221,8 @@ if coinflip_win_status_bowl == True:
 
             else:
                 print("invalid. Try again.")
-
     coinflip_win_status_bowl_act()
+
+
+
+
