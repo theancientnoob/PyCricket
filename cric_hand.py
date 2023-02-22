@@ -142,7 +142,7 @@ if coinflip_win_status_bat == True:
 
                 if user_roll in keywords:
 
-                    if user_roll in keywords and user_roll != "score":
+                    if user_roll in keywords and user_roll != "score" and user_roll != comp_choice:
                         for char in user_roll:
                             if char.isdigit():
                                 user_score += int(char)
@@ -172,7 +172,7 @@ if coinflip_win_status_bat == True:
             else:
                 print("invalid. numbers are only alllowed.")
     coinflip_win_status_bat_act()
-    user_score = score_bat
+    score_bat = user_score
 
 if coinflip_win_status_bowl == True:
     user_bowling_done = True
@@ -231,7 +231,7 @@ if coinflip_win_status_bowl == True:
             else:
                 print("invalid. Try again.")
     coinflip_win_status_bowl_act()
-    comp_score = score_comp
+    score_comp = comp_score
 
 if user_batting_done == True:
     def coinflip_win_status_bowl_act():
@@ -289,6 +289,7 @@ if user_batting_done == True:
             else:
                 print("invalid. Try again.")
     coinflip_win_status_bowl_act()
+    score_comp = comp_score
 
 if user_bowling_done == True:
     def coinflip_win_status_bat_act():
@@ -352,6 +353,7 @@ if user_bowling_done == True:
             else:
                 print("invalid. numbers are only alllowed.")
     coinflip_win_status_bat_act()
+    score_bat = user_score
 
 print("computing the final results...")
 sleep(2)
