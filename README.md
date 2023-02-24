@@ -19,8 +19,8 @@ Setup:
 
  1. Download the file
  2. Open Terminal/cmd and cd to the location of the file.
-	(just drag the file over to the terminal window, it will copy the location of the file)
-	eg:`cd <location of the file>`
+	(just drag the folder in which the file is present over to the terminal window, it will copy the location of the folder.)
+	eg:`cd <location of the folder in which the file is present>`
  3. run the following command:
 	 `python3 PyCricket.py`
 
